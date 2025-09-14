@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 
 export default function Toolkit() {
   const tools = [
-    "Project Management",
-    "Email Management",
-    "Calendar Management",
-    "Research & Data Entry",
-    "Testimonials",
+    "Resume & CV Writing",
+    "Cover Letter Crafting",
+    "LinkedIn Profile Optimization",
+    "Keyword & ATS Optimization",
+    "Career Coaching Insights",
+    "Job Application Strategy",
   ];
 
   return (

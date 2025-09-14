@@ -1,33 +1,41 @@
 import { motion } from "framer-motion";
-import { FaTasks, FaUsers, FaCalendarAlt, FaHeadset, FaClipboardList, FaGlobe } from "react-icons/fa";
-import { MdTravelExplore, MdSupportAgent } from "react-icons/md";
+import {
+  FaFileAlt,
+  FaLinkedin,
+  FaUserTie,
+  FaBriefcase,
+  FaClipboardCheck,
+  FaPenNib,
+} from "react-icons/fa";
+import { MdWork, MdOutlineFindInPage } from "react-icons/md";
 
 export default function ServicesSkillsSection() {
   const services = [
-    { name: "Executive Virtual Assistance", icon: <FaTasks /> },
-    { name: "Administrative Support", icon: <FaClipboardList /> },
-    { name: "Customer Service Support", icon: <FaHeadset /> },
-    { name: "Social Media Management", icon: <FaUsers /> },
-    { name: "Email and Calendar Management", icon: <FaCalendarAlt /> },
-    { name: "HR Support", icon: <MdSupportAgent /> },
-    { name: "Executive Support", icon: <FaTasks /> },
-    { name: "Team Management", icon: <FaUsers /> },
-    { name: "Project Management", icon: <FaClipboardList /> },
-    { name: "Data Management", icon: <FaTasks /> },
-    { name: "Expense Tracking", icon: <FaClipboardList /> },
-    { name: "Meeting Agendas & Minutes", icon: <FaClipboardList /> },
-    { name: "Transcriptions & Translation", icon: <FaGlobe /> },
-    { name: "Internet Research", icon: <FaGlobe /> },
-    { name: "Travel Planning & Coordination", icon: <MdTravelExplore /> },
+    { name: "Professional Resume Writing", icon: <FaFileAlt /> },
+    { name: "Cover Letter Writing", icon: <FaPenNib /> },
+    { name: "LinkedIn Profile Optimization", icon: <FaLinkedin /> },
+    { name: "Career Branding & Personal Statements", icon: <FaUserTie /> },
+    { name: "Interview Coaching Preparation", icon: <FaBriefcase /> },
+    { name: "Job Search Strategy & Guidance", icon: <MdWork /> },
+    {
+      name: "ATS Optimization & Keyword Targeting",
+      icon: <FaClipboardCheck />,
+    },
+    {
+      name: "Career Document Editing & Proofreading",
+      icon: <MdOutlineFindInPage />,
+    },
   ];
 
   const skills = [
-    "Organization & Time Management",
-    "Communication",
-    "Adaptability & Fast Learning",
-    "Attention to Detail",
-    "Grit & Resilience",
-    "Proactive Problem Solving",
+    "ATS-Friendly Resume Formatting",
+    "Keyword Optimization",
+    "Career Storytelling",
+    "LinkedIn Branding",
+    "Interview Preparation",
+    "Industry-Specific Resume Customization",
+    "Editing & Proofreading",
+    "Client-Centered Communication",
   ];
 
   return (

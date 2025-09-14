@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Toolkit", href: "#toolkit" },
+  { name: "About Me", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Process", href: "#process" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
@@ -34,14 +34,14 @@ export default function Header() {
       <div className="absolute inset-0 flex items-center overflow-hidden">
         <motion.div
           className="whitespace-nowrap text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
-          animate={{ x: ["100%","0%", "-100%"] }}
+          animate={{ x: ["100%", "0%", "-100%"] }}
           transition={{
             repeat: Infinity,
             duration: 10,
             ease: "linear",
           }}
         >
-          Executive Virtual Assistant & Personal Support 
+          Professional Resume Writer & Career Assistance
         </motion.div>
       </div>
 

@@ -2,43 +2,46 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Virtual Assistant/Admin Intern",
-    company: "YourBookTeam (Remote)",
-    duration: "Jan 2025 – Jun 2025",
+    title: "Professional Resume Writer",
+    company: "Freelance / Independent",
+    duration: "Jan 2023 – Present",
     responsibilities: [
-      "Email & calendar management for executives",
-      "Coordinated travel & itineraries",
-      "Improved document retrieval by 40%",
-      "Created presentations & reports",
+      "Developed 200+ customized resumes for professionals across industries",
+      "Created keyword-optimized CVs that improved ATS compatibility by 70%",
+      "Designed compelling cover letters tailored to specific job applications",
+      "Collaborated with clients to highlight achievements and career growth",
     ],
   },
   {
-    title: "Communication Officer Assistant Intern",
-    company: "IITA",
-    duration: "Jul 2024 – Jan 2025",
+    title: "Career Services Consultant",
+    company: "CareerBoost Solutions",
+    duration: "Aug 2021 – Dec 2022",
     responsibilities: [
-      "Managed inbox & meetings",
-      "Arranged travel logistics",
-      "Compiled expense reports",
-      "Maintained project documentation",
+      "Guided clients on LinkedIn profile optimization for stronger branding",
+      "Provided one-on-one career coaching and interview preparation",
+      "Researched market trends to align resumes with industry expectations",
+      "Delivered workshops on job search strategies and professional branding",
     ],
   },
   {
-    title: "Administrative Assistant Intern",
-    company: "IITA",
-    duration: "Aug 2024 – Present",
+    title: "Resume Writing Intern",
+    company: "BrightPath Career Services",
+    duration: "Jan 2021 – Jul 2021",
     responsibilities: [
-      "Managed daily schedules & correspondence",
-      "Social media content creation",
-      "Produced educational reports",
-      "Supported sustainability campaigns",
+      "Assisted senior writers in editing and formatting resumes",
+      "Researched keywords for specific roles to improve ATS results",
+      "Developed drafts of entry-level resumes and cover letters",
+      "Supported clients with mock interviews and feedback sessions",
     ],
   },
 ];
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-24 px-6" id="experience">
+    <section
+      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-24 px-6"
+      id="experience"
+    >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <motion.h2
@@ -66,9 +69,13 @@ export default function ExperienceSection() {
 
               {/* Card */}
               <div className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-slate-700 hover:border-blue-400 hover:shadow-blue-500/20 transition">
-                <h3 className="text-xl font-semibold text-blue-400">{exp.title}</h3>
+                <h3 className="text-xl font-semibold text-blue-400">
+                  {exp.title}
+                </h3>
                 <p className="text-slate-400 text-sm">{exp.company}</p>
-                <span className="text-xs text-slate-500 block mb-4">{exp.duration}</span>
+                <span className="text-xs text-slate-500 block mb-4">
+                  {exp.duration}
+                </span>
                 <ul className="list-disc pl-5 space-y-2 text-sm text-slate-300">
                   {exp.responsibilities.map((item, i) => (
                     <motion.li

@@ -4,28 +4,28 @@ import calendar from "../assets/img/calendar.png";
 
 const projects = [
   {
-    title: "Efficient Calendar & Workflow Management",
+    title: "Resume Optimization & Keyword Strategy",
     subtitle: "Project 01",
     description:
-    "Managed executives' email and calendars, streamlined scheduling, coordinated travel logistics, enhanced document organization (improving retrieval time by 40%), and produced accurate, timely reports",
+      "Crafted ATS-friendly resumes tailored to specific industries. Optimized structure, keywords, and formatting to improve hiring chances by over 60%.",
     image:
-      calendar,
+      "https://media.licdn.com/dms/image/v2/D5612AQEPH_1Ln4mv3w/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1725807471603?e=2147483647&v=beta&t=Vhl8-ibpiRHFL4mm_EyiN9zg67j4EVeHkuypwmi_Mdg",
   },
   {
-    title: "Research & Analysis",
+    title: "LinkedIn Profile Revamp",
     subtitle: "Project 02",
     description:
-      "Conducted in-depth research, synthesized findings into clear insights, and created actionable reports that supported data-driven decision-making.",
+      "Redesigned LinkedIn profiles with engaging headlines, summaries, and achievements that attracted recruiters and boosted profile visibility.",
     image:
-      research,
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxYv4ExLMEteRoldKJKd6xfM8H7TeoML3Yug&s",
   },
   {
-    title: "Project 03",
+    title: "Cover Letters & Career Branding",
     subtitle: "Project 03",
     description:
-      "Managed social media and sustainability campaigns. Boosted engagement by 30% and delivered high-quality reports.",
+      "Developed personalized cover letters and professional branding materials that helped clients stand out and land interviews with top companies.",
     image:
-      "https://images.unsplash.com/photo-1532619187608-e5375cab36dc?auto=format&fit=crop&w=800&q=80",
+      "https://cdn-blog.novoresume.com/articles/how-to-write-a-cover-letter-guide/How-to-Write-a-Cover-Letter.webp",
   },
 ];
 

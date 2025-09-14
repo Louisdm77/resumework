@@ -1,12 +1,36 @@
 import { motion } from "framer-motion";
 
 const services = [
-  { label: "Inbox & Scheduling", icon: "📅", desc: "Managed calendars, inbox triage, reminders, and follow-ups." },
-  { label: "Project Coordination", icon: "📂", desc: "Task tracking, timelines, and smooth delivery across teams." },
-  { label: "Social Media Management", icon: "📱", desc: "Content scheduling, engagement, community replies, growth." },
-  { label: "Research & Reporting", icon: "🔍", desc: "Deep dives, summaries, light data cleaning, and insights." },
-  { label: "Client Support", icon: "🤝", desc: "Polished comms, meeting notes, proposals, & status updates." },
-  { label: "Admin Tasks", icon: "📝", desc: "Docs, sheets, forms, file org—done cleanly and on time." },
+  {
+    label: "Resume Writing",
+    icon: "📝",
+    desc: "Crafting tailored resumes that highlight your strengths, skills, and achievements.",
+  },
+  {
+    label: "Cover Letters",
+    icon: "📄",
+    desc: "Writing persuasive cover letters that capture attention and showcase your value.",
+  },
+  {
+    label: "LinkedIn Optimization",
+    icon: "💼",
+    desc: "Transforming LinkedIn profiles into powerful personal branding tools.",
+  },
+  {
+    label: "Job Search Strategy",
+    icon: "🎯",
+    desc: "Guiding clients with effective strategies to secure interviews faster.",
+  },
+  {
+    label: "Interview Preparation",
+    icon: "🎤",
+    desc: "Coaching clients to confidently communicate their skills and experience.",
+  },
+  {
+    label: "Career Consulting",
+    icon: "🌟",
+    desc: "Providing clarity, direction, and guidance for professional growth.",
+  },
 ];
 
 // Strong, visible motion on small screens
@@ -59,7 +83,7 @@ export default function About() {
             custom={0}
             className="text-4xl md:text-5xl font-bold mb-4 leading-snug text-white"
           >
-            What I Can Do For You
+            How I Can Help Your Career
           </motion.h3>
 
           {/* Drawn underline */}
@@ -76,9 +100,11 @@ export default function About() {
             custom={1}
             className="text-lg text-slate-300 leading-relaxed mb-4"
           >
-            I provide tailored{" "}
-            <span className="text-blue-400 font-semibold">Virtual Assistant services</span>{" "}
-            that remove friction in your day so you can focus on growth.
+            I specialize in creating{" "}
+            <span className="text-blue-400 font-semibold">
+              professional, results-driven resumes
+            </span>{" "}
+            that help you stand out in today’s competitive job market.
           </motion.p>
 
           <motion.p
@@ -86,9 +112,12 @@ export default function About() {
             custom={2}
             className="text-lg text-slate-300 leading-relaxed"
           >
-            From scheduling and client communication to research and reporting,
-            I bring <span className="italic text-blue-300">organization, clarity, and speed</span>{" "}
-            to your operations.
+            From resumes and cover letters to LinkedIn profiles and interview
+            prep, I bring{" "}
+            <span className="italic text-blue-300">
+              clarity, confidence, and strategy
+            </span>{" "}
+            to your career journey.
           </motion.p>
         </motion.div>
 
@@ -118,7 +147,12 @@ export default function About() {
                 initial={{ opacity: 0, scale: 0.6, rotate: -12, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, rotate: 0, y: 0 }}
                 viewport={{ once: true, amount: 0.6 }}
-                transition={{ type: "spring", stiffness: 260, damping: 18, delay: i * 0.05 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 18,
+                  delay: i * 0.05,
+                }}
                 className="text-4xl mb-3"
               >
                 {icon}
@@ -150,14 +184,17 @@ export default function About() {
       >
         <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between bg-slate-800/60 border border-slate-700 rounded-2xl p-6">
           <p className="text-slate-300">
-            Need a reliable VA to keep timelines, inboxes, and deliverables tight?
-            <span className="text-white font-semibold"> Let’s talk.</span>
+            Ready to land more interviews and opportunities?
+            <span className="text-white font-semibold">
+              {" "}
+              Let’s work together.
+            </span>
           </p>
           <a
             href="#contact"
             className="inline-block rounded-xl bg-blue-600 hover:bg-blue-500 transition px-5 py-3 text-white font-medium text-center"
           >
-            Hire Me
+            Get Started
           </a>
         </div>
       </motion.div>

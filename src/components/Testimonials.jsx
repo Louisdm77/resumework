@@ -4,24 +4,24 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Francis has great communication skills and high-quality work. He’s helped me stay more organized and productive.",
-      name: "Victoria Ayeni",
+        "Henry completely transformed my resume. After using his service, I landed three interviews within two weeks.",
+      name: "Olivia Martins",
     },
 
     {
       quote:
-        "Working with Francis was a game-changer. He handles every task with precision and reliability.",
-      name: "Carla Mendez",
+        "The resume and LinkedIn optimization Henry did for me were top-notch. Recruiters started reaching out almost immediately.",
+      name: "Daniel Okoro",
     },
     {
       quote:
-        "From day one, Francis brought clarity and structure to our workflow. A true professional.",
-      name: "Emeka Johnson",
+        "Henry tailored my CV for a competitive role, and I got the job! His attention to detail is second to none.",
+      name: "Sophia Johnson",
     },
     {
       quote:
-        "Francis exceeded expectations. His dedication, speed, and detail-oriented mindset are unmatched.",
-      name: "Sandra Lee",
+        "I struggled for months with job applications, but after Henry rewrote my resume, I finally secured a role in my dream company.",
+      name: "Michael Adeyemi",
     },
   ];
 

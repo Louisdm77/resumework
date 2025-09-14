@@ -13,7 +13,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-blue-400 mb-6"
         >
-          Let’s Connect
+          Let’s Get Your Career Moving
         </motion.h3>
 
         <motion.p
@@ -22,18 +22,19 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-slate-300 mb-8 leading-relaxed"
         >
-          Whether you’re looking for support or have a project to discuss,
-          I’m just a message away.
+          Ready to land more interviews and opportunities? Reach out today and
+          let’s create a resume, cover letter, or LinkedIn profile that truly
+          represents you.
         </motion.p>
 
         <div className="space-y-4 text-left text-sm text-slate-300">
           <p>
             <span className="text-slate-400 font-medium">Email:</span>{" "}
             <a
-              href="mailto:francisinaku2580@gmail.com"
+              href="mailto:henry2580@gmail.com"
               className="text-blue-400 hover:underline"
             >
-              francisinaku2580@gmail.com
+              henry2580@gmail.com
             </a>
           </p>
           <p>
@@ -42,18 +43,18 @@ export default function Contact() {
               href="tel:+2348103048060"
               className="text-blue-400 hover:underline"
             >
-              +234-810-304-8060
+              +234-902-930-2950
             </a>
           </p>
           <p>
             <span className="text-slate-400 font-medium">LinkedIn:</span>{" "}
             <a
-              href="https://linkedin.com/in/francisinaku"
+              href="https://linkedin.com/in/Henry"
               target="_blank"
               rel="noreferrer"
               className="text-blue-400 hover:underline"
             >
-              linkedin.com/in/francisinaku
+              linkedin.com/in/henry
             </a>
           </p>
         </div>
