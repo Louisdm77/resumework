@@ -1,128 +1,69 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const navLinks = [
-  { name: "About Me", href: "#about" },
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Process", href: "#process" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Packages", href: "#packages" },
+  { name: "Testimonials", href: "/testimonials" },
+  { name: "Our Blog", href: "#blog" },
+  { name: "FAQ", href: "/faq" },
 ];
-
-const linkVariants = {
-  hidden: { opacity: 0, y: -15 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.4, ease: "easeOut" },
-  }),
-};
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.header
-      className="fixed top-0 left-0 w-full z-50 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-lg overflow-hidden"
-      initial={{ y: -80, opacity: 0, scale: 0.95 }}
-      animate={{ y: 0, opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      {/* Sliding Marquee Background */}
-      <div className="absolute inset-0 flex items-center overflow-hidden">
-        <motion.div
-          className="whitespace-nowrap text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
-          animate={{ x: ["100%", "0%", "-100%"] }}
-          transition={{
-            repeat: Infinity,
-            duration: 10,
-            ease: "linear",
-          }}
-        >
-          Professional Resume Writer & Career Assistance
-        </motion.div>
-      </div>
+    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50 ">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="bg-blue-600 text-white font-bold text-lg px-3 py-1 rounded-md">
+            PC
+          </div>
+          <span className="font-semibold text-gray-800 hidden sm:inline">
+            Pro Career
+          </span>
+        </div>
 
-      {/* Content on top of marquee */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-4 flex justify-between items-center ">
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8 text-sm font-medium ml-auto  bg-opacity-90 backdrop-blur-md rounded-b-lg shadow-md p-3">
-          {navLinks.map((link, i) => (
-            <motion.a
+        <nav className="hidden md:flex space-x-8 text-sm font-medium">
+          {navLinks.map((link) => (
+            <a
               key={link.name}
               href={link.href}
-              className="relative text-slate-300 hover:text-white transition-colors group"
-              initial="hidden"
-              animate="visible"
-              variants={linkVariants}
-              custom={i}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
             >
               {link.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-400 transition-all duration-300 group-hover:w-full" />
-            </motion.a>
+            </a>
           ))}
         </nav>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden bg-blue-300 p-3 rounded-full text-3xl text-slate-300 focus:outline-none"
+          className="md:hidden text-2xl text-gray-700 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          <AnimatePresence mode="wait" initial={false}>
-            {isOpen ? (
-              <motion.div
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <FiX />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menu"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <FiMenu />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
 
       {/* Mobile Dropdown */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="md:hidden w-full bg-slate-900/95 backdrop-blur-sm border-t border-slate-700 shadow-lg px-6 py-6 space-y-4"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-          >
-            {navLinks.map((link, i) => (
-              <motion.a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block text-slate-300 hover:text-blue-400 text-lg font-medium transition-colors"
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.4 }}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200 shadow-sm px-6 py-4 space-y-4">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="block text-gray-700 hover:text-blue-600 font-medium"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
+    </header>
   );
 }

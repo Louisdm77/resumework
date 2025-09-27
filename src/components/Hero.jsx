@@ -1,91 +1,49 @@
-import { motion } from "framer-motion";
 import img from "../assets/img/fr.jpg";
-
-const text =
-  "Crafting powerful, keyword-optimized resumes and LinkedIn profiles that help professionals stand out, land interviews, and secure their dream jobs.";
 
 export default function Hero() {
   return (
-    <section
-      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white py-24 md:py-32"
-      id="hero"
-    >
-      <div className="container mx-auto px-4 text-center flex flex-col items-center">
-        {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
-        >
-          <img
-            src="https://thumbs.dreamstime.com/b/african-businessman-looking-camera-handsome-folded-hands-43192684.jpg"
-            alt="Francis Inaku - Resume Writer"
-            className="w-30 h-30 md:w-52 md:h-52 rounded-full object-cover border-4 border-slate-600 shadow-xl"
-          />
-        </motion.div>
+    <section className="bg-white py-20 md:py-28 font-sans" id="hero">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Left: Text Content */}
+        <div className="text-left">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 leading-snug tracking-tight">
+            Helping Professionals <span className="text-blue-700">Unlock</span>{" "}
+            Their Career Potential
+          </h1>
+          <p className="text-lg text-gray-500 mb-8 max-w-xl leading-relaxed">
+            I craft powerful, keyword-optimized resumes and LinkedIn profiles
+            that elevate your professional brand, help you stand out, and open
+            doors to new opportunities.
+          </p>
 
-        {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold mb-4 text-yellow-100"
-        >
-          Hi, I’m Henry Akwaji
-        </motion.h2>
-
-        {/* Typewriter Subtext */}
-        <motion.p
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="text-lg md:text-xl max-w-2xl mx-auto text-yellow-200"
-        >
-          {text.split("").map((char, i) => (
-            <motion.span
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 + i * 0.03 }}
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              className="px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg shadow hover:bg-blue-800 transition"
             >
-              {char}
-            </motion.span>
-          ))}
-        </motion.p>
+              Work With Me
+            </a>
+            <a
+              href="#packages"
+              className="px-6 py-3 bg-gray-100 text-gray-800 font-medium rounded-lg shadow hover:bg-gray-200 transition"
+            >
+              View Packages
+            </a>
+          </div>
+        </div>
 
-        {/* Buttons */}
-        <motion.div
-          className="flex gap-4 mt-8"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 3 }} // appears after typing finishes
-        >
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.1, rotate: [-2, 2, -2, 0] }}
-            className="px-6 py-3 bg-amber-600 text-white font-medium rounded-xl shadow-lg hover:bg-amber-700 transition"
-          >
-            Work With Me
-          </motion.a>
-          <motion.a
-            href="#portfolio"
-            whileHover={{ scale: 1.1, rotate: [-2, 2, -2, 0] }}
-            className="px-6 py-3 bg-white text-stone-800 font-medium rounded-xl shadow-lg hover:bg-yellow-100 transition"
-          >
-            See My Work
-          </motion.a>
-        </motion.div>
+        {/* Right: Image with Decorative Border */}
+               <div className="flex justify-center md:justify-end">
+          <div className="p-[6px] rounded-xl bg-gradient-to-tr from-blue-700 via-blue-400 to-cyan-400 shadow-lg">
 
-        <motion.div className="mt-6">
-          <motion.a
-            href="https://calendly.com/henry2580/free-discovery-call"
-            whileHover={{ scale: 1.1, rotate: [-2, 2, -2, 0] }}
-            className="px-6 py-3 bg-white text-stone-800 font-medium rounded-xl shadow-lg hover:bg-yellow-100 transition"
-          >
-            Book a Free Consultation
-          </motion.a>
-        </motion.div>
+            <img
+              src="https://i.pinimg.com/1200x/94/c7/20/94c720a1069394fecf5773084934898b.jpg"
+              alt="Professional Resume Assistance"
+              className="relative w-72 h-72 md:w-96 md:h-96 rounded-lg object-cover shadow-xl border-4 border-white"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
